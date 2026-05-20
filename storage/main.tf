@@ -12,4 +12,8 @@ resource "azurerm_storage_account" "this" {
   account_replication_type = var.account_replication_type
 
   tags = var.tags
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
